@@ -2,11 +2,29 @@ import React from 'react'
 import { actors } from '../data'
 
 const Actors = () => {
+  const data = actors.map((actor) => {
     return (
-        <div>
-            {/* code goes here */}
-        </div>
+      <div>
+        {actor.name}
+        <ul>
+          {actor.movies.map((movie) => {
+            return (
+              <li>
+                {movie}
+              </li>
+            )
+          })}
+        </ul>
+      </div>
     )
+  })
+
+  return (
+    <div>
+      <h1>Actors Page</h1>
+      {data}
+    </div>
+  )
 }
 
 module.exports = Actors

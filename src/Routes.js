@@ -1,17 +1,19 @@
 import React from 'react'
 import { Router, Route, hashHistory, IndexRoute } from 'react-router'
 
-import Actors from './components/Actors'
 import App from './components/App'
-import Directors from './components/Directors'
 import Home from './components/Home'
 import Movies from './components/Movies'
+import Directors from './components/Directors'
+import Actors from './components/Actors'
 
 const Routes = (
-    <Route path="/" component={App}>
-        {/* routes go here */}
-    </Route>
+  <Route path="/" component={App}>
+    <IndexRoute component={Home} />
+    <Route path="/movies" component={Movies} />
+    <Route path="/directors" component={Directors} />
+    <Route path="/actors" component={Actors} />
+  </Route>
 )
-
 
 module.exports = Routes

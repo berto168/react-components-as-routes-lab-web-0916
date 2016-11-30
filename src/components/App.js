@@ -1,13 +1,17 @@
 import React from 'react'
+import Actors from './Actors';
+import Directors from './Directors';
+import Movies from './Movies';
 
 import NavBar from './NavBar'
 
 const App = (props) => {
-    return (
-        <div>
-            {/* code goes here */}
-        </div>
-    )
+  return (
+      <div>
+        <NavBar />
+        {props.children}
+      </div>
+  )
 }
 
 module.exports = App
